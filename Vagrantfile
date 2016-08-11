@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     vb.memory = 2048
     vb.cpus = 2
   end
-  
-  config.vm.provision "shell", path: "./scripts/install_gitlab.sh", privileged: false
+
+  config.vm.provision "shell", path: "./scripts/install_gitlab.sh", privileged: true
 
 end
