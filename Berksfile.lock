@@ -1,0 +1,9 @@
+DEPENDENCIES
+  omnibus-gitlab (~> 0.3.3)
+  postfix (~> 3.8.0)
+
+GRAPH
+  gitlab-attributes-with-secrets (0.1.0)
+  omnibus-gitlab (0.3.3)
+    gitlab-attributes-with-secrets (>= 0.0.0)
+  postfix (3.8.0)

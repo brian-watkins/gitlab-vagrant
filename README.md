@@ -1,18 +1,16 @@
 ### Gitlab CE on Vagrant
 
-Simple Vagrantfile for running Gitlab CE
+Vagrantfile for running Gitlab CE.
 
 ```
-$ vagrant up
+$ bundle && berks install && berks vendor
+$ GITLAB_HOST=your_ip_address vagrant up
 ```
 
 Then visit: `http://localhost:9090`
 
-The machine is setup to forward port 22 to localhost:2222. You can access gitlab over ssh
-with something like:
+You'll be asked for a password; this is for the `root` user.
 
-```
-git remote set-url origin ssh://git@localhost:2222/path/to/repo.git
-```
+Access gitlab via SSH at GITLAB_HOST:2222 or HTTP at GITLAB_HOST:9090. Just use the url shown in the Gitlab web interface to clone repositories over HTTP or SSH. 
 
-Make sure to create an ssh key, register the key with gitlab, and add the identity on your local machine with `ssh-add`. 
+Sending mail should (hopefully) work, so long as you are not on a network that blocks it. 
